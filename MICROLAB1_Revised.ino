@@ -1,3 +1,5 @@
+//Group Members: Skylar Smith, Daniel Kassey, Sakshi Jeena
+
 int red = 10;
 int yellow = 9;
 int green = 8;
@@ -25,7 +27,7 @@ void loop() {
   }
   
 }
-void changeLights() {
+void changeLights() {       //Functions called to change the traffic light
  while(true)
  { 
   green_on();
@@ -35,6 +37,7 @@ void changeLights() {
   yellow_on();
   delay(3000);
   buzzerY();
+   
   red_on();
   delay(20000);
   buzzerRG();
@@ -43,35 +46,38 @@ void changeLights() {
 
   void green_on()
   {
-  digitalWrite(green, HIGH);
-  digitalWrite(red, LOW);
-  digitalWrite(yellow, LOW);
+    digitalWrite(green, HIGH);
+    digitalWrite(red, LOW);
+    digitalWrite(yellow, LOW);
   }
+
   void yellow_on()
   {
-  digitalWrite(yellow, HIGH);
-  digitalWrite(red, LOW);
-  digitalWrite(green, LOW);
+    digitalWrite(yellow, HIGH);
+    digitalWrite(red, LOW);
+    digitalWrite(green, LOW);
   }
   
   void red_on()
   {
-  digitalWrite(red,HIGH);
-  digitalWrite(yellow, LOW);
-  digitalWrite(green, LOW);
+    digitalWrite(red,HIGH);
+    digitalWrite(yellow, LOW);
+    digitalWrite(green, LOW);
   } 
+
   void buzzerRG()
   {
-  digitalWrite(buzzer, LOW);
-  delay(17000);
-  digitalWrite(buzzer, HIGH);
-  delay(3000);
-  digitalWrite(buzzer, LOW);
+    digitalWrite(buzzer, LOW);
+    delay(17000);
+    digitalWrite(buzzer, HIGH);
+    delay(3000);
+    digitalWrite(buzzer, LOW);
   }
+
   void buzzerY()
   {
-  digitalWrite(buzzer, HIGH);
-  delay(3000);
-  digitalWrite(buzzer, LOW);
+    digitalWrite(buzzer, HIGH);
+    delay(3000);
+    digitalWrite(buzzer, LOW);
   }
   
